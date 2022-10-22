@@ -11,42 +11,36 @@ Marca 3 para Méxicanos
 
 """
 solonumeros = "Debes ingresar un valor númerico 🤞"
-
-###Validación de menú
-opcion = int(input(menu))
-def validarmenu (opcion):
+opcion=int(input(menu))
+def calculo (valordolar, pesos, moneda,opcion):
+       while True:
+           valordolar = (valordolar)
+           pesos = (pesos)
+           conversion = float(pesos / valordolar)
+           conversion = round(conversion, 2)
+           moneda = (moneda)
+           print("El resultado es $" + str(conversion) + " dolares Americanos 🤑👌")
+           nuevocalculo = (str(input("¿Quieres hacer un nuevo calculo de " + moneda + " ¿Si o No? : ")))
+           if nuevocalculo != "no" and nuevocalculo != "No":
+               break
+           else:
+               print("Gracias por usar mi programa")
+               #break
+def validacionmenu (opcion):
     while True:
         try:
-            opcion = (opcion)
+            opcion = int(input(menu))
         except ValueError:
-            print(solonumeros)
-            break
+            print("Debes elegir esribir un número disponible en el menú")
+            continue
+        else:
+            if opcion == 1:
+                calculo(4700,pesos = float(input("¿Cuantos pesos Colombianos  quieres convertir? 🤔 ")),moneda="PESOS COLOMBIANOS",opcion=opcion)
+            elif opcion == 2:
+                calculo(153.83,pesos = float(input("¿Cuantos pesos Argentinos quieres convertir? 🤔 ")),moneda="PESOS ARGENTINOS",opcion=opcion)
+            elif opcion == 3:
+                calculo(19.90,pesos = float(input("¿Cuantos pesos Méxicanos quieres convertir? 🤔 ")),moneda="PESOS MEXICANOS",opcion=opcion)
+            else:
+                print("Debes leer bien")
 
-def calculo (valordolar, pesos, moneda):
-    while True:
-        valordolar = (valordolar)
-        try:
-            pesos = (pesos)
-        except ValueError:
-            print(solonumeros)
-        conversion = float(pesos / valordolar)
-        conversion = round(conversion, 2)
-        moneda = (moneda)
-        print("El resultado es $" + str(conversion) + " dolares Americanos 🤑👌")
-        nuevocalculo = (str(input("¿Quieres hacer un nuevo calculo de " + moneda + " ¿Si o No? : ")))
-        if nuevocalculo == "Si" or nuevocalculo == "si":
-            print("Vamos por ese nuevo calculo")
-        elif nuevocalculo == "No" or nuevocalculo == "no":
-            print("Gracias por usar mi programa")
-            break
-
-while True:
-    if opcion == 1:
-        calculo(4700,pesos = float(input("¿Cuantos pesos Colombianos quieres convertir? 🤔 ")),moneda="PESOS COLOMBIANOS")
-    elif opcion == 2 :
-        calculo(153.83,pesos = float(input("¿Cuantos pesos Argentinos quieres convertir? 🤔 ")),moneda="PESOS ARGENTINOS")
-    elif opcion == 3 :
-        calculo(19.90,pesos = float(input("¿Cuantos pesos Colombianos quieres convertir? 🤔 ")),moneda="PESOS MEXICANOS")
-    else:
-        print("Debes seleccionar una opción del menú")
-        break
+validacionmenu(opcion)
