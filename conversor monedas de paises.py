@@ -6,4 +6,4 @@ Marca 1 para Colombia
 Marca 2 para Perú
 Marca 3 para Argentina
 """
-
+opcion = input(menu)
