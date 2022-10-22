@@ -10,7 +10,7 @@ while True:
     otra_conversion = str(input("¿Quieres hacer otro calculo Si o No? "))
     if otra_conversion != "No" and otra_conversion != "no":
         print("Nuevo calculo")
-    elif  otra_conversion == "No" or otra_conversion == "no":
+    elif otra_conversion == "No" or otra_conversion == "no":
         print("Gracias por usar mi primer programa")
         break
 
