@@ -1,9 +1,17 @@
 ##Copiando conversor de monedas Platzi
+solonumeros = "Debes ingresar un valor númerico"
 print(" Hola Bienvenido a mi conversor de dolares a pesos ")
-valor_dolar = float(input("¿Que precio tiene el USD hoy en COP? "))
-
 while True:
-    pesos = float(input("¿Cuantos COP quieres convertir? "))
+    try:
+        valor_dolar = float(input("¿Que precio tiene el USD hoy en COP? "))
+    except ValueError:
+        print(solonumeros)
+        continue
+    try:
+        pesos = float(input("¿Cuantos COP quieres convertir? "))
+    except ValueError:
+        print(solonumeros)
+        continue
     conversion = float(pesos / valor_dolar)
     conversion = round(conversion, 2)
     print("El resultado es $" + str(conversion) + " dolares Americanos")
