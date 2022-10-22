@@ -11,7 +11,7 @@ Marca 3 para Méxicanos
 
 """
 solonumeros = "Debes ingresar un valor númerico 🤞"
-agradecimiento="Gracias por usar este rpograma hasta la próxima 😍"
+agradecimiento="Gracias por usar este programa hasta la próxima 😍"
 def calculo (valordolar, pesos, moneda):
        while True:
            valordolar = (valordolar)
@@ -43,7 +43,7 @@ def calculo (valordolar, pesos, moneda):
 def validacionmenu (opcion):
     while True:
         try:
-            opcion=opcion
+            opcion=int(input(menu))
         except ValueError:
             print("Debes esribir un número no texto")
             continue
@@ -58,4 +58,4 @@ def validacionmenu (opcion):
                 print(""" Debes elegir un número del menú 
                 1, 2 o 3  """)
                 return validacionmenu (opcion=int(input(menu)))
-validacionmenu(opcion=int(input(menu)))
+validacionmenu(opcion=int)
