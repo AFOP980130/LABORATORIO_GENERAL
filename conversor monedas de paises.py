@@ -11,7 +11,7 @@ Marca 3 para convertir de pesos Méxicanos
 
 """
 solonumeros = "Debes ingresar un valor númerico 🤞"
-agradecimiento="Gracias por usar este programa hasta la próxima 😍"
+agradecimiento="Gracias por usar este programa, hasta la próxima 😍"
 def calculo (valordolar, pesos, moneda,opcion):
        while True:
            ##Operacion de conversión
