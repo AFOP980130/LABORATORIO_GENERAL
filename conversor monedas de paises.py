@@ -14,10 +14,12 @@ solonumeros = "Debes ingresar un valor númerico 🤞"
 agradecimiento="Gracias por usar este programa hasta la próxima 😍"
 def calculo (valordolar, pesos, moneda,opcion):
        while True:
+           ##Operacion de conversión
            valordolar = (valordolar)
            pesos = (pesos)
            conversion = float(pesos / valordolar)
            conversion = round(conversion, 2)
+           ##Nuevo calculo##
            moneda = (moneda)
            print("El resultado es $" + str(conversion) + " dolares Americanos 🤑👌")
            nuevocalculo = (str(input("¿Quieres hacer un nuevo calculo ¿Si o No? : ")))
@@ -34,9 +36,6 @@ def calculo (valordolar, pesos, moneda,opcion):
            else:
                print("¡Vamos por un nuevo calculo! 🤞 ")
                break
-
-
-
 def inicio (opcion):
     while True:
         try:
