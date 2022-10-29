@@ -1,5 +1,5 @@
 bienvenida = """
-Bienvenido al 4to programa este programa es un conversor de monedad de 3 paises a dolares 👌
+Bienvenido 😍
 """
 print(bienvenida)
 menu = """
