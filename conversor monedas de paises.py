@@ -19,7 +19,7 @@ def nuevocalculo():
         exit(agradecimiento)
     else:
         print("¡Vamos por un nuevo calculo! 🤞 ")
-        inicio(opcion=int)
+        inicio()
 def calculo (valordolar, pesos, moneda,opcion):
        #while True:
            ##Operacion de conversión
@@ -30,7 +30,7 @@ def calculo (valordolar, pesos, moneda,opcion):
            moneda = (moneda)
            print("El resultado es $" + str(conversion) + " dolares Americanos 🤑👌")
            nuevocalculo()
-def inicio (opcion):
+def inicio ():
     while True:
         try:
             opcion=int(input(menu))
@@ -48,4 +48,4 @@ def inicio (opcion):
                 print(""" Debes elegir un número del menú 1, 2 o 3  """)
                 return inicio()
 if __name__ == "__main__":
-    inicio(opcion=int)
+    inicio()
