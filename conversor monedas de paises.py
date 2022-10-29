@@ -37,7 +37,7 @@ def calculo (valordolar, pesos, moneda,opcion):
 
 
 
-def validacionmenu (opcion):
+def inicio (opcion):
     while True:
         try:
             opcion=int(input(menu))
@@ -52,7 +52,7 @@ def validacionmenu (opcion):
             elif opcion == 3:
                 calculo(19.90,pesos=float(input("¿Cuantos pesos Méxicanos quieres convertir? 🤔 ")),moneda="PESOS MEXICANOS",opcion=3)
             else:
-                print(""" Debes elegir un número del menú 
-                1, 2 o 3  """)
-                return validacionmenu (opcion=int(input(menu)))
-validacionmenu(opcion=int)
+                print(""" Debes elegir un número del menú 1, 2 o 3  """)
+                return inicio(opcion=int(input(menu)))
+if __name__ == "__main__":
+    inicio(opcion=int)
