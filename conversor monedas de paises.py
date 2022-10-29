@@ -21,13 +21,12 @@ def nuevocalculo():
         print("¡Vamos por un nuevo calculo! 🤞 ")
         inicio(opcion=int)
 def calculo (valordolar, pesos, moneda,opcion):
-       while True:
+       #while True:
            ##Operacion de conversión
            valordolar = (valordolar)
            pesos = (pesos)
            conversion = float(pesos / valordolar)
            conversion = round(conversion, 2)
-           ##Nuevo calculo##
            moneda = (moneda)
            print("El resultado es $" + str(conversion) + " dolares Americanos 🤑👌")
            nuevocalculo()
@@ -36,7 +35,7 @@ def inicio (opcion):
         try:
             opcion=int(input(menu))
         except ValueError:
-            print("Debes esribir un número no texto")
+            print("Debes esribir un número no TEXTO")
             continue
         else:
             if opcion == 1:
@@ -47,6 +46,6 @@ def inicio (opcion):
                 calculo(19.90,pesos=float(input("¿Cuantos pesos Méxicanos quieres convertir? 🤔 ")),moneda="PESOS MEXICANOS",opcion=3)
             else:
                 print(""" Debes elegir un número del menú 1, 2 o 3  """)
-                return inicio(opcion=int(input(menu)))
+                return inicio()
 if __name__ == "__main__":
     inicio(opcion=int)
