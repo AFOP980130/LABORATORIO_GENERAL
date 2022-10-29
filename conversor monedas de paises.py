@@ -3,15 +3,23 @@ Bienvenido 😍
 """
 print(bienvenida)
 menu = """
-Opciones para convertir a dolares
+Elige la moneda que quieres convertir
 
 Marca 1 para convertir de pesos Colombianos
 Marca 2 para convertir de pesos Argentinos
 Marca 3 para convertir de pesos Méxicanos
 
+Ingresa tu opción aquí ⬇️.
 """
 solonumeros = "Debes ingresar un valor númerico 🤞"
 agradecimiento="Gracias por usar este programa, hasta la próxima 😍"
+def nuevocalculo():
+    nuevocalculo = (str(input("¿Quieres hacer un nuevo calculo ¿Si o No? : ")))
+    if nuevocalculo == "no" or nuevocalculo =="NO":
+        exit(agradecimiento)
+    else:
+        print("¡Vamos por un nuevo calculo! 🤞 ")
+        inicio(opcion=int)
 def calculo (valordolar, pesos, moneda,opcion):
        while True:
            ##Operacion de conversión
@@ -22,20 +30,7 @@ def calculo (valordolar, pesos, moneda,opcion):
            ##Nuevo calculo##
            moneda = (moneda)
            print("El resultado es $" + str(conversion) + " dolares Americanos 🤑👌")
-           nuevocalculo = (str(input("¿Quieres hacer un nuevo calculo ¿Si o No? : ")))
-           if nuevocalculo == "no":
-               exit(agradecimiento)
-           elif nuevocalculo == "No":
-               exit(agradecimiento)
-           elif nuevocalculo == "n":
-               exit(agradecimiento)
-           elif nuevocalculo == "NO":
-               exit(agradecimiento)
-           elif nuevocalculo == "not":
-               exit(agradecimiento)
-           else:
-               print("¡Vamos por un nuevo calculo! 🤞 ")
-               break
+           nuevocalculo()
 def inicio (opcion):
     while True:
         try:
