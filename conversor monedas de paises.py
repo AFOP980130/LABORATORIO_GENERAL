@@ -20,30 +20,33 @@ def nuevocalculo():
     else:
         print("¡Vamos por un nuevo calculo! 🤞 ")
         inicio()
-def calculo (valordolar, pesos, moneda,opcion):
-       #while True:
-           ##Operacion de conversión
+def calculo (valordolar, pais):
            valordolar = (valordolar)
-           pesos = (pesos)
-           conversion = float(pesos / valordolar)
-           conversion = round(conversion, 2)
-           moneda = (moneda)
-           print("El resultado es $" + str(conversion) + " dolares Americanos 🤑👌")
-           nuevocalculo()
+           while True:
+               try:
+                   pesos = float(input("¿Cuantos pesos " + str(pais) + " quieres convertir? 🤔 "))
+               except ValueError:
+                   print(solonumeros)
+                   return
+               else:
+                   conversion = float(pesos / valordolar)
+                   conversion = round(conversion, 2)
+                   print("El resultado es $" + str(conversion) + " dolares Americanos 🤑👌")
+                   nuevocalculo()
 def inicio ():
     while True:
         try:
             opcion=int(input(menu))
         except ValueError:
-            print("Debes esribir un número no TEXTO")
+            print(solonumeros)
             continue
         else:
             if opcion == 1:
-                calculo(4800,pesos=float(input("¿Cuantos pesos Colombianos  quieres convertir? 🤔 ")),moneda="PESOS COLOMBIANOS",opcion=1)
+                calculo(valordolar=4800,pais="COLOMBIANOS")
             elif opcion == 2:
-                calculo(153.83,pesos=float(input("¿Cuantos pesos Argentinos quieres convertir? 🤔 ")),moneda="PESOS ARGENTINOS",opcion=2)
+                calculo(valordolar=153.83,pais="ARGENTINOS")
             elif opcion == 3:
-                calculo(19.90,pesos=float(input("¿Cuantos pesos Méxicanos quieres convertir? 🤔 ")),moneda="PESOS MEXICANOS",opcion=3)
+                calculo(valordolar=19.90,pais="MÉXICANOS")
             else:
                 print(""" Debes elegir un número del menú 1, 2 o 3  """)
                 return inicio()
