@@ -10,7 +10,12 @@ def run ():
     numerovariado = random.randint(1,100)
     numeroelegido = int(input("Escribe tu número: "))
     vidas = 5
-    while vidas>0 & numeroelegido!=numerovariado:
+    run2(numerovariado,numeroelegido, vidas)
+def run2( numerovariado, numeroelegido, vidas):
+    while numeroelegido != numerovariado:
+        if vidas == 0:
+            print("Perdiste el número era: ", numerovariado, "👀")
+            run()
         print("Te quedan:", vidas, " vidas.")
         if numeroelegido<numerovariado:
             vidas -= 1
@@ -22,8 +27,7 @@ def run ():
             numeroelegido = int(input("Escribe tu número: "))
     if numeroelegido == numerovariado:
         print("Ganaste 😍")
-    if vidas == 0:
-        print("Perdiste el número era: ",numerovariado, "👀")
+        run()
 
 
 
