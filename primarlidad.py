@@ -3,7 +3,9 @@ def runB():
         if i % 2 == 0:
             continue
         print(i)
-def runA():
+
+
+def runa():
     cadena = input("Escribe una palabra para contar cuantas H tiene: ")
     cantidadh = 0
     for i in cadena:
