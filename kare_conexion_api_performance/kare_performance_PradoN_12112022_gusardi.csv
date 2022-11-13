@@ -1,0 +1,2 @@
+date;order_count;order_gross;order_cance_val;sslips_cance_val;sslips_val_grss;invoices_val_gross;crednote_val_grss;pot_customers;closed_day;given_discount;down_payments
+2022-11-11;2;2527000.00;0.00;0;0.00;8573400.00;2349000.00;0;false;0.00;2527000.00
