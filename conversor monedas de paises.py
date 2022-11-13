@@ -1,5 +1,5 @@
 bienvenida = """
-Bienvenido 😍
+Bienvenid@
 """
 print(bienvenida)
 menu = """
